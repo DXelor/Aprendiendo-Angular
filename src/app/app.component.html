@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div [ngStyle]="{
+        'background': config.color,
+        'padding': '20px',
+        'border': '5px solid black'
+      }">
+    <h1>
+      Binvenido al {{ title }}!
+    </h1>
+    <p>Vamos a Aprender Angular</p>
+    <p>{{descripcion}}</p>
+    <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">ocultar</button>
+    <button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar_videojuegos">mostrar</button>
+    <videojuego *ngIf="mostrar_videojuegos"></videojuego>
+    <cursos></cursos>
+  </div>
+</body>
+</html>
