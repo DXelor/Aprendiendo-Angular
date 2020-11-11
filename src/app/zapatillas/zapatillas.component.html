@@ -24,6 +24,7 @@
         </li>
     </ul>
     <p>El color de las zapatillas que quedan es:</p>
+    <p><input type="text"[(ngModel)]= "color"></p>
     <ul [ngSwitch]="color">
         <li *ngSwitchCase= "'yellow'">
             El color predominante es el <span [ngStyle]="{'background': color}">amarillo</span>.
