@@ -15,10 +15,11 @@
     </h1>
     <p>Vamos a Aprender Angular</p>
     <p>{{descripcion}}</p>
-    <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">ocultar</button>
+    <!-- <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">ocultar</button>
     <button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar_videojuegos">mostrar</button>
     <videojuego *ngIf="mostrar_videojuegos"></videojuego>
-    <cursos></cursos>
+    <cursos></cursos> -->
+    <router-outlet></router-outlet>
   </div>
 </body>
 </html>
