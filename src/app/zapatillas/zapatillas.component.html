@@ -8,7 +8,7 @@
     <h2>{{titulo}}</h2>
 
     <p>Añadir marca</p>
-    <p><input type="text" [(ngModel)]="mi_marca"/></p>
+    <p><input type="text" [(ngModel)]="mi_marca"/></p> <!-- (blur)="onBlur" (keyup.enter)="onBlur()"-->
     <button (click)="getMarca()">mostrar marca</button>
     <button (click)="addMarca()">añadir marca</button>
     <strong>{{mi_marca}}</strong>
