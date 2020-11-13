@@ -15,6 +15,15 @@
     </h1>
     <p>Vamos a Aprender Angular</p>
     <p>{{descripcion}}</p>
+    <nav>
+      <a [routerLink]="['/']">Home</a>
+      &nbsp;
+      <a [routerLink]="['/zapatillas']">Zapatillas</a>
+      &nbsp;
+      <a [routerLink]="['/cursos']">Cursos</a>
+      &nbsp;
+      <a [routerLink]="['/videojuego']">Videojuegos</a>
+    </nav>
     <!-- <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">ocultar</button>
     <button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar_videojuegos">mostrar</button>
     <videojuego *ngIf="mostrar_videojuegos"></videojuego>

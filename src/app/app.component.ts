@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { config } from 'process';
-import { Config } from './models/config';
+import { config }    from 'process';
+import { Config }    from './models/config';
 
 @Component({
   selector: 'app-root',
