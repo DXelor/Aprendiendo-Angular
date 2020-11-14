@@ -13,11 +13,12 @@ import { CursosComponent }     from './cursos/cursos.component';
 
 //Array de rutas
 const appRoutes: Routes = [
-    {path: '',           component: HomeComponent},
-    {path: 'zapatillas', component: ZapatillasComponent},
-    {path: 'videojuego', component: VideojuegoComponent},
-    {path: 'cursos',     component: CursosComponent},
-    {path: '**',         component: HomeComponent}
+    {path: '',                  component: HomeComponent},
+    {path: 'zapatillas',        component: ZapatillasComponent},
+    {path: 'videojuego',        component: VideojuegoComponent},
+    {path: 'cursos',            component: CursosComponent},
+    {path: 'cursos/:nombre',    component: CursosComponent},
+    {path: '**',                component: HomeComponent}
 ];
 
 //Exportar el modulo del router

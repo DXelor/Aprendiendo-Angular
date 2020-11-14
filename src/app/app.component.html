@@ -16,13 +16,13 @@
     <p>Vamos a Aprender Angular</p>
     <p>{{descripcion}}</p>
     <nav>
-      <a [routerLink]="['/']">Home</a>
+      <a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a>
       &nbsp;
-      <a [routerLink]="['/zapatillas']">Zapatillas</a>
+      <a [routerLink]="['/zapatillas']" [routerLinkActive]="['active']">Zapatillas</a>
       &nbsp;
-      <a [routerLink]="['/cursos']">Cursos</a>
+      <a [routerLink]="['/cursos']" [routerLinkActive]="['active']">Cursos</a>
       &nbsp;
-      <a [routerLink]="['/videojuego']">Videojuegos</a>
+      <a [routerLink]="['/videojuego']" [routerLinkActive]="['active']">Videojuegos</a>
     </nav>
     <!-- <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar_videojuegos">ocultar</button>
     <button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar_videojuegos">mostrar</button>
