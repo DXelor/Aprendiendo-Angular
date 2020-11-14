@@ -18,7 +18,14 @@ export class CursosComponent implements OnInit {
   ngOnInit() {
     this._route.params.subscribe((params: Params) => {
       this.nombre = params.nombre;
+      if(this.nombre == null){
+        this._router.navigate(['/home']);
+        alert('logeate')
+      }
     })
+  }
+  redirigir(){
+    this._router.navigate(['/zapatillas'])
   }
 
 }
