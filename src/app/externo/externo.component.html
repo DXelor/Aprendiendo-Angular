@@ -1,3 +1,5 @@
+{{fecha | date:'dd/mm/yy'}}
+<hr>
 <input type="text"[(ngModel)]="userId" (keyup.enter)="cargaUsuario()"/>
 <div *ngIf="!user">
     <img src="http://www.gifde.com/gif/otros/decoracion/cargando-loading/cargando-loading-041.gif" width="50px">
