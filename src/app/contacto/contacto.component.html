@@ -7,20 +7,29 @@
 </head>
 <body>
     <h2>Contacto</h2>
-    <form #formContacto="ngForm" (ngSubmit)="onSubmit()">
+    <form #formContacto="ngForm" (ngSubmit)="onSubmit(formContacto)">
         <label for="nombre">Nombre</label>
         <br/>
-        <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="usuario.nombre"/>
+        <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="usuario.nombre" required pattern="[a-zA-Z]+" />
+        <span *ngIf="nombre.touched && !nombre.valid">
+            el nombre es obligatorio
+        </span>
         <br/>
 
         <label for="apellidos">Apellidos</label>
         <br/>
-        <input type="text" name="apellidos" #apellidos="ngModel" [(ngModel)]="usuario.apellidos"/>
+        <input type="text" name="apellidos" #apellidos="ngModel" [(ngModel)]="usuario.apellidos" required pattern="[a-zA-Z]+" />
+        <span *ngIf="apellidos.touched && !apellidos.valid">
+            los apellidos son obligatorios
+        </span>
         <br/>
 
         <label for="email">Email</label>
         <br/>
-        <input type="text" name="email" #email="ngModel" [(ngModel)]="usuario.email"/>
+        <input type="text" name="email" #email="ngModel" [(ngModel)]="usuario.email" required/>
+        <span *ngIf="email.touched && !email.valid">
+            el email no es valido
+        </span>
         <br/>
 
         <label for="mensaje">Mensaje</label>
@@ -28,7 +37,7 @@
         <textarea name="mensaje" #mensaje="ngModel" [(ngModel)]="usuario.mensaje"></textarea>
         <br/>
 
-        <input type="submit" value="Enviar"/>
+        <input type="submit" value="Enviar" [disabled]="!formContacto.form.valid"/>
     </form>
 </body>
 </html>
