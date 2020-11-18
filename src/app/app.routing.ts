@@ -9,6 +9,7 @@ import { ZapatillasComponent } from './zapatillas/zapatillas.component';
 import { VideojuegoComponent } from './Videojuego/videojuego.component';
 import { CursosComponent }     from './cursos/cursos.component';
 import { ExternoComponent }    from './externo/externo.component';
+import { ContactoComponent }   from './contacto/contacto.component';
 
 
 
@@ -21,6 +22,7 @@ const appRoutes: Routes = [
     {path: 'cursos',            component: CursosComponent},
     {path: 'cursos/:nombre',    component: CursosComponent},
     {path: 'externo',           component: ExternoComponent},
+    {path: 'contacto',          component: ContactoComponent},
     {path: '**',                component: HomeComponent}
 ];
 
